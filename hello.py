@@ -156,3 +156,111 @@ p.replace("i","y")
 a.split()
 b = "name:age:address:phone"
 b.split(":")
+
+#List
+
+odd = [1,3,5,7,9]
+odd
+
+a = []
+b = [1,2,3]
+c = ['Life', 'is', 'too', 'short']
+d = [1,2,'Life','is']
+e = [b, c]
+f = ["abc", e]
+g = [1,2,3,'A','B']
+
+g[3]+g[4]
+
+b
+
+b[0]
+b[0]+b[1]
+
+c = ['Life', 'is', 'too', 'short']
+c[0]
+c[:1]
+#c[0]은 'Life' 로 출력, c[:1]은 ['Life'] 로 출력
+
+a=[1,2,3,['a','b','c']]
+a[-1][0]
+a[:]
+
+a=[1,2,3]
+b=[4,5,6]
+a+b
+
+len(a)
+
+a
+#a[2]+"hi"
+str(a[2])+"hi"
+
+print(str(a[2])+"hi")
+
+a = [1,2,3]
+del a[1]
+a[:]
+
+a = [1,2,3,['a','b','c']]
+del a[-1]
+a
+a=[1,2,3]
+b=['a','b','c']
+c=[4,5,6]
+a
+a.append(b)
+del a[-1]
+a.append(c)
+del a[-1]
+#d = list()
+d
+d = a+c+c
+
+d.sort()
+d
+
+s = [3, 8, 5,['c', 'a', 'b']]
+s[:3].sort()
+s[3].sort()
+s
+
+k = [7,3,5,['d','c','a']]
+k
+k[:3].sort()
+k
+k[3].sort()
+k
+
+k[3].reverse()
+k[:3].reverse()
+k
+
+a = [2,3,4]
+a.insert(0,1)
+a[-1]
+len(a)
+a.insert(9,6)
+#list의 최대길이 이상의 길이에 숫자를 넣으면 걍 맨마지막에 넣는거
+a
+a.remove(6)
+# .remove(x)는 배열의 몇번째를 없애는게아니라 첫번째 x 데이터를 지우는거 
+a = [1,2,3]
+a.pop()
+a.pop(2)
+a
+
+a = [1,1,2,3,4]
+a.count(1)
+
+a.extend([4,5])
+a.reverse()
+a
+a.remove(1)
+
+b = [6,7]
+a = [4,1,2,5,3]
+a.extend(b)
+a
+a.sort()
+a
