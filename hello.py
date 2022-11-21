@@ -264,3 +264,119 @@ a.extend(b)
 a
 a.sort()
 a
+
+#tuple
+
+t1 = ()
+t2 = (1,)
+t2
+t3 = (1,2,3)
+t4 = 1,2,3
+t5 = ('a','b',('ab','cd'))
+
+del t1[0]
+#튜플은 값을 설정후 못바꿈
+
+t1 = (1, 2, 'a', 'b')
+t2 = (3, 4)
+t3 = t1 + t2
+#튜플을 정렬하려면 함수를 만들어서 새로 정의해야함 못바꾸니까
+#튜플은 요솟값을 변경할수 없기 때문에 sort, insert, remove, pop과 같은 내장 함수가 없다.
+
+#dictionary
+
+a = {1: 'hi'}
+a
+a = { 'a': [1,2,3]}
+a['b'] = [4,5,6]
+a
+a = {1: 'a'}
+a[2] = 'b'
+a
+del a['b']
+a
+
+grade = {'pey':10, 'julliet': 99}
+grade['julliet']
+
+a = {1:'a',2:'b'}
+a[1]
+
+a = {'name': 'pey', 'phone': '010-9999-1234', 'birth': '1118'}
+a.keys()
+a.values()
+
+a.items()
+a.clear()
+a
+a = {'name':'pey', 'phone':'010-9999-1234', 'birth': '1118'}
+a.get('name')
+a['name']
+#a.get('x') 방식은 'x'가 딕셔너리에 존재안해도 오류없이 none을 리턴함. False라는 뜻
+
+a.get('nokey','foo') # 딕셔너리에 존재안해도 디폴트값 리턴방식
+
+'name' in a
+'namee' in a
+
+# set
+
+s1 = set([1,2,3])
+s1
+
+s2 = set("Hello")
+s2
+
+#set은 unordered, no duplicate
+
+#set을 인덱싱하려면 list나 tuple로 변환
+
+s1 = set([1,2,3])
+l1 = list(s1)
+s1[0]
+l1[0]
+t1 = tuple(s1)
+t1
+
+s1 = set([1, 2, 3, 4, 5, 6])
+s2 = set([4, 5, 6, 7, 8, 9])
+
+l1=[]
+l1 = list(s1)
+l2 = list(s2)
+l3 = l1+l2
+l3
+l3.sort()
+l3
+
+s1&s2
+s1.intersection(s2)
+s1.intersection(s1)
+s1&s1
+
+s3 = set([1,2,3])
+s4 = set([4,5,6])
+
+s1 | s2
+s1.union(s2)
+
+s1
+s2
+s1-s2
+s1.difference(s2)
+s2.difference(s1)
+
+s1 = set([1,2,3])
+s1.add(4)
+s1
+s1.update([4,4,5,6,6,7,8,9])
+s1
+#set 에 add 나 update에 중복값 입력해도 하나만 추가됨
+
+s1 = set([1,2,3])
+s1.remove(2)
+s1 = set([1,1,1,2,2,2,2,3,3,3,4,4,4,5])
+#set에 다 지우려면 어캐하는진 몰겠음
+
+# bool
+
