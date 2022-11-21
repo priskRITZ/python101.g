@@ -378,5 +378,195 @@ s1.remove(2)
 s1 = set([1,1,1,2,2,2,2,3,3,3,4,4,4,5])
 #set에 다 지우려면 어캐하는진 몰겠음
 
-# bool
+# boolean
+a = True
+b = False
+c = False
 
+type(a)
+
+1 == 1
+
+a == b
+b == c
+type(b)
+d = type(b)
+type(b) == d
+
+e = 2 > 1
+e == a
+
+a = [1,2,3,4]
+while a:
+    print(a.pop())
+
+if []:
+    print("참")
+else:
+    print("거짓")
+
+bool("python")
+bool("")
+bool(" ")
+
+a = [1,2,3]
+id(a)
+b = a
+id(b)
+b
+a[1] = 4
+a
+b
+
+a = [1,2,3] 
+b = a[:]
+id(a)
+id(b)
+
+from copy import copy
+a = [1,2,3] 
+b = copy(a)
+
+b is a
+b == a
+# is 와 == 는 다름! is는 주소가 같아야 같은듯하다
+
+a,b = 'python', 'life'
+a
+b
+[a,b] = ['python', 'life']
+
+a = 3
+b = 5
+a,b = b,a
+
+money = True
+if money:
+    print("택시를")
+print("타고가라")
+
+x = 2
+y = 3
+
+x == y
+x != y
+
+money = 3000
+
+if money >= 3000:
+    print("택시를 타라")
+else:
+    print("걸어가라")
+
+money = 2000
+card = True
+
+if money >= 3000 and card:
+    print("택시를 타라")
+else:
+    print("걸어가라")
+
+1 in [1,2,3]
+2 not in [4,5,6]
+
+'p' in 'python'
+'P' not in 'python' # scale 구분함
+
+money = 5000
+pocket = ['paper', 'phone', money]
+if money in pocket and money >= 5000:
+    print("택시를 타라")
+else:
+    print("걸어가라")
+
+pocket = ['paper', 'money', 'phone']
+if 'money' in pocket:
+    pass
+else:
+    print("카드를 꺼내라")
+
+pocket = ['paper', 'phone']
+card = True
+if 'money' in pocket:
+    print("택시를 타라")
+elif card:
+    print("택시를 타라")
+else:
+    print("걸어가라")
+
+score = 50
+if score >= 60:
+    message = "success"
+else:
+    message = "failure"
+print(message)
+
+score = 70
+message = "success" if score >= 60 else "failure"
+print(message)
+
+# while
+
+treeHit = 0
+while treeHit <10:
+    if treeHit == 0:
+        print("나무를 찍기 시작합니다.")
+    else: pass
+    treeHit = treeHit +1
+    print("나무를 %d번 찍었습니다." % treeHit)
+    if treeHit == 10:
+        print("나무 넘어갑니다.")
+
+prompt = """
+1. Add
+2. Del
+3. List
+4. Quit
+Enter number: """
+number = 0
+while number != 4:
+    print(prompt)
+    number = int(input())
+
+coffee = 10
+money = 300
+
+while money:
+    print("돈을 받았으니 커피를 줍니다.")
+    coffee = coffee -1
+    print("남은 커피의 양은 %d개 입니다." % coffee)
+    if coffee == 0:
+        print("커피가 다 떨어졌습니다. 판매를 중지합니다.")
+        break
+
+coffee = 10
+while True:
+    money = int(input("돈을 넣어 주세요: "))
+    if money == 300:
+        print("커피를 줍니다.")
+        coffee = coffee -1
+        print("남은 커피의 양은 %d개 입니다." % coffee)
+    elif money > 300:
+        print("거스름돈 %d를 주고 커피를 줍니다." % (money -300))
+        coffee = coffee -1
+        print("남은 커피의 양은 %d개 입니다." % coffee)
+    else:
+        print("돈을 다시 돌려주고 커피를 주지 않습니다.")
+        print("남은 커피의 양은 %d개 입니다." % coffee)
+    if coffee == 0:
+        print("커피가 다 떨어졌습니다. 판매를 중지 합니다.")
+        break
+
+a = 0
+while a < 10:
+    a = a+1
+    if a%2 == 0: continue
+    print(a)
+
+a = 0
+while a < 10:
+    a += 1
+    if a%2 == 1: continue
+    print(a)
+
+# https://wikidocs.net/21 무한루프 차례
